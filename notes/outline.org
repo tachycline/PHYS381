@@ -1,0 +1,31 @@
+* The toolset
+** the unix command line (bash)
+** git
+** text editors/IDEs
+** jupyter
+** markdown
+** LaTeX
+** anaconda
+*** environments
+*** generally useful packages
+**** numpy
+**** matplotlib
+**** scipy
+**** pandas
+**** jupyter/notebook
+*** situational packages
+**** sympy
+**** h5py
+**** sqlalchemy
+
+* Plotting Data
+* TDR (a): Debugging Plots
+* Fitting and Modeling
+* TDR (b): Debugging Models
+* Simulating
+* TDR (c): Software tests
+* Profiling and parallel execution
+* TDR (d): Refactoring, especially for parallel execution
+
+
+
