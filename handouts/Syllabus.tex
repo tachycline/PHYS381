@@ -1,0 +1,198 @@
+% Created 2018-01-13 Sat 01:45
+\documentclass{tufte-handout}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\author{Dr. Cavendish McKay}
+\date{Spring 2018}
+\title{PHYS 381: Computational Physics}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 25.1.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+
+\section{Course information}
+\label{sec-1}
+\begin{description}
+\item[{Meeting times/location}] MWF 10:00--10:50, RSC 104/107
+\item[{Contact information}] 143 RSC/AHP; cavendish.mckay@marietta.edu
+\item[{Office Hours}] MWF 9:00--10:00, 11:00--12:00, or whenever my door is ajar
+\item[{Texts}] None (some readings will be distributed online or in class)
+\end{description}
+\section{What this course is about}
+\label{sec-2}
+Until about the 1940s, science was loosely divided into two camps: theory and experiment. During the Second World War, however, it became apparent that there were scientific problems which didn't comfortably fit into either of these categories. In particular, the effort to break Enigma in the UK and the Manhattan Project in the US involved calculations which were too difficult or involved to be carried out by theorists in the necessary time frame, but were necessary to inform and drive experiments.  Both of these problems were solved by introducting \emph{computers} --- first in the form of teams of humans doing specific calculations, and then mechanical (and later electronic) machines designed to carry out the necessary steps to arrive at an answer.
+
+Today, of course, computers are ubiquitous, and serve many more functions than those early forays into computation might suggest. In fact, computers are becoming increasingly similar to Robert Heinlein's oft quoted statement about a competent human being:
+
+\begin{quote}
+A human being should be able to change a diaper, plan an invasion, butcher a hog, conn a ship, design a building, write a sonnet, balance accounts, build a wall, set a bone, comfort the dying, take orders, give orders, cooperate, act alone, solve equations, analyze a new problem, pitch manure, program a computer, cook a tasty meal, fight efficiently, die gallantly. Specialization is for insects.
+
+-- Robert A. Heinlein
+\end{quote}
+
+In this class, we will not be butchering any hogs (or most of the other things on Heinlein's list, for that matter), but we will be looking at a number of different ways computers can be effectively used in the practice of physics.
+
+\section{Outcomes}
+\label{sec-3}
+By the end of the course, students should be able to:
+\begin{itemize}
+\item use version control
+\item Use jupyter notebook as a presentation tool
+\item plot data effectively with matplotlib
+\item model/fit data
+\item create a simulation for a physical system
+\item debug code
+\item profile code to assess performance
+\item write and use software tests
+\item organize a software project into a python package
+\end{itemize}
+
+\section{Evaluation}
+\label{sec-4}
+Your grade will be determined as follows:
+
+\begin{center}
+\begin{tabular}{lll}
+Percentage & Description & Additional information\\
+\hline
+30\% & Homework Assignments & Typically one per class\\
+40\% & Projects & One per course section\\
+20\% & Final Project & Integrates the above\\
+10\% & Final Presentation & \\
+\end{tabular}
+\end{center}
+
+\subsection{Homework Assignments}
+\label{sec-4-1}
+Homework assignments will mostly be (relatively) small, focused activities designed to help you develop a particular skill. You are encouraged to collaborate with other students and make use of online resources \emph{as long as you adequately attribute their contributions}.
+
+Homework assignments will be graded on a 3 point scale.
+\subsection{Projects}
+\label{sec-4-2}
+Projects are somewhat longer assignments which will combine several tasks to achieve a particular goal. Each project after the first will be rooted in a physical problem. Each project, when complete, will be shared with the rest of the class, so your work must be adequately documented for others to use it.
+
+A complete project will typically consist of a python package and one or more jupyter notebooks that illustrate its use. 
+
+\subsection{Final Project}
+\label{sec-4-3}
+Your final project will be to combine the results of the projects carried out throughout the semester into a coherent solution to one of the physical problems we've been discussing. Since you likely won't have developed all of the parts, this will require some collaboration with the other students in the class.
+
+\subsection{Final Presentation}
+\label{sec-4-4}
+When your final project is completed, you will assemble your work (and results) into a presentation-mode notebook and explain what you did in the form of a scientific talk. Consider this to be similar in theme to the presentations you have given in Experimental Physics, but focused on a purely computational project, rather than an experiment.
+
+\section{Approximate Schedule}
+\label{sec-5}
+The course is divided into 6 sections, each with its own project:
+
+\begin{center}
+\begin{tabular}{lll}
+Section & Approximate duration & Project\\
+\hline
+The toolset & 3 weeks & Cheat Sheets\\
+Plotting data & 2 weeks & Plotting Pipeline\\
+Fitting and Modeling & 1 week & Model, fit, and explain\\
+Simulating & 3 weeks & Simulate a physical system\\
+Testing, debugging, and refactoring & 3 weeks (in 4 parts) & Test suite\\
+Profiling and parallel execution & 2 weeks & A simulation in parallel\\
+\end{tabular}
+\end{center}
+
+This schedule is ambitious, and we probably will have to adjust. My intention is to split the testing, debugging, and refactoring section into four parts (consisting of about a week each) with one part following each of the other sections except for the toolset.
+
+\section{Policies}
+\label{sec-6}
+\begin{description}
+\item[{Attendance and participation}] In this class, you will learn by doing. For this to work, you need to show up! If you have a laptop, you should bring it to class.
+
+\item[{Missed Class time due to co-curricular events or religious observances}] Classes missed due to participation in
+college-sponsored co-curricular events or college-recognized
+religious observances are considered excused absences provided
+appropriate procedures are followed.  The student must notify the
+instructor at the earliest possible time before the absence and
+arrange to make up missed work as defined by the instructor’s
+syllabus.  The co-curricular activity must be a performance,
+professional meeting, or athletic contest to be considered an
+excused absence.  The religious observance must appear on the
+College’s calendar of religious observances in order to be
+considered an excused absence.  If it does not, an excused absence
+can be granted only if the student requests special permission from
+the Dean of the Faculty.
+
+An excused absence allows the student to make up exams or quizzes
+given during the absence, or to reschedule oral presentations.  It
+is the responsibility of the student to get notes from the class and
+to compensate as much as possible for the absence.  It is also the
+student’s responsibility to work with the instructor in determining
+an appropriate time for make-up assignments.  Students must
+recognize that many classroom and laboratory activities cannot be
+replicated and that absences may be detrimental to their
+performance.
+
+\item[{Academic Dishonesty}] The following statement is an excerpt from the \textbf{\textbf{Marietta
+College Undergraduate Programs, 2013-2014 Catalog}}, page 130:
+
+\begin{quote}
+Dishonesty within the academic community is a very
+serious matter, because dishonesty destroys the basic trust
+necessary for a healthy educational environment. Academic
+dishonesty is any treatment or representation of work as if one
+were fully responsible for it, when it is in fact the work of
+another person. Academic dishonesty includes cheating, plagiarism,
+theft, or improper manipulation of laboratory or research data or
+theft of services. A substantiated case of academic dishonesty may
+result in disciplinary action, including a failing grade on the
+project, a failing grade in the course, or expulsion from the
+College.
+\end{quote}
+
+\item[{Accomodations}] Students who believe that they may need accommodations due to
+a documented disability should contact the Academic Resource
+Center (Andrews Hall, Third floor, 376-4700) and the instructor as
+soon as possible to ensure that such accommodations are
+implemented in a timely manner. You must meet with the ARC staff
+to verify your eligibility for any accommodation and for academic
+assistance.
+
+\item[{Health and Wellness}] A recent American College Health Survey found stress, sleep
+problems, anxiety, depression, interpersonal concerns, death of a
+significant other and alcohol use among the top ten health
+impediments to academic performance.  Students experiencing
+personal problems or situational crises during the semester are
+encouraged to contact the Dr. J. Michael Harding Center for Health
+and Wellness (740-376-4477) for assistance, support and advocacy.
+This service is free and confidential.
+
+\item[{Academic Warning Program}] Marietta College is committed to student success and engagement.
+Because academic success is directly linked to active engagement
+in class, faculty are encouraged to communicate absences, below
+average performance, and disengagement in order to provide support
+to all students.  All departments participate in the Academic
+Update Program through MAP-Works with the Academic Resource
+Center.
+\end{description}
+
+
+\begin{description}
+\item[{Adjustments}] I reserve the right to adjust this syllabus should it become
+necessary.
+\end{description}
+% Emacs 25.1.1 (Org mode 8.2.10)
+\end{document}
