@@ -2,6 +2,7 @@
 #+AUTHOR: Dr. Cavendish McKay
 #+DATE: Spring 2018
 #+EMAIL: cavendish.mckay@marietta.edu
+#+LATEX_CLASS: tufte-handout
 #+OPTIONS: toc:nil
 
 * Course information
