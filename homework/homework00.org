@@ -1,0 +1,19 @@
+#+TITLE: PHYS 381: Homework 00
+#+AUTHOR: 
+#+DATE: 15 January 2018
+#+LATEX_CLASS: tufte-handout
+#+OPTIONS: toc:nil
+
+-----
+* Getting access to the cluster
+Point a web browser to https://atlacamani.marietta.edu:8000 and log in. Your username is your MC email username (your email address without the @marietta.edu), and your initial password is your student ID.
+-----
+* Change your initial password on the cluster
+- Once you have logged in to the dashboard, select New -> Terminal.
+- In the terminal window, type `passwd`, and then follow the instructions to change your password.
+
+-----
+* Getting access to a shell on your own computer 
+- If you have a Mac, find the Terminal app. By default, it's in the /Other/ group accessible in the Launchpad.
+- If you have a Windows machine, download and install Git for Windows. It includes a bash shell, and we will need it later anyway.
+
