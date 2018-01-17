@@ -1,0 +1,40 @@
+#+TITLE: PHYS 381: Computational Physics, Week 1
+#+AUTHOR:
+#+DATE: Spring 2018
+#+EMAIL: cavendish.mckay@marietta.edu
+#+LATEX_CLASS: tufte-handout
+#+OPTIONS: toc:nil
+
+* Monday
+* Wednesday
+** Check on HW (Elijah, Ben)
+** ls
+- Note colors
+- ls -F
+- ls --help
+
+the --help flag is fairly common, but not universal
+- we've seen ls -a
+- ls -l
+** pwd and the meaning of /
+** cd
+- introduce ..
+- introduce home directory shortcut
+- absolute vs relative paths
+** mkdir
+- you may also use the "new folder" option from the jupyter dashboard
+- some naming conventions (don't use spaces; don't begin with -; limit punctuation to . or - or _)
+** nano
+- you may also use the "new text file" option from the jupyter dashboard
+- file naming conventions
+- the control key and notation
+** touch
+** rm
+- rm -i
+- rm -r
+** mv
+** cp
+- with multiple filenames
+- cp -r
+
+* Friday
