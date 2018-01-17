@@ -8,7 +8,10 @@
 * Create a provisional directory structure for this course
 - Open a shell on the cluster, and cd to your home directory.
 - Create a directory called PHYS381 and cd into it.
-- Lay out a set of subdirectories you think will be useful for organizing your work in this class this semester.
+- Create a set of subdirectories you think will be useful for
+  organizing your work in this class this semester. I'm being
+  deliberately vague here, as I want you to put some thought into how
+  you might organize your work.
 
 -----
 * Begin project 0: Cheat sheets
