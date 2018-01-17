@@ -16,4 +16,3 @@ Point a web browser to https://atlacamani.marietta.edu:8000 and log in. Your use
 * Getting access to a shell on your own computer 
 - If you have a Mac, find the Terminal app. By default, it's in the /Other/ group accessible in the Launchpad.
 - If you have a Windows machine, download and install Git for Windows. It includes a bash shell, and we will need it later anyway.
-

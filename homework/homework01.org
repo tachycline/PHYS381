@@ -1,0 +1,25 @@
+#+TITLE: PHYS 381: Homework 01
+#+AUTHOR: 
+#+DATE: 17 January 2018
+#+LATEX_CLASS: tufte-handout
+#+OPTIONS: toc:nil
+
+-----
+* Create a provisional directory structure for this course
+- Open a shell on the cluster, and cd to your home directory.
+- Create a directory called PHYS381 and cd into it.
+- Lay out a set of subdirectories you think will be useful for organizing your work in this class this semester.
+
+-----
+* Begin project 0: Cheat sheets
+Project 0 for the course is to build a set of cheat sheets for the tools in our toolset. A /cheat sheet/ should be a single page (or at most, a single sheet of paper, front and back) summary of the most used/useful commands with information on their syntax and usage.
+
+For a few good examples, see:
+- https://www.datacamp.com/community/data-science-cheatsheets
+- https://www.git-tower.com/blog/git-cheat-sheet/
+
+We will talk about formatting later. For now, just start collecting the information about the shell. What commands have we used so far? What are some useful command-line arguments, and what do they do? Collect your notes in a text file on the cluster.
+
+-----
+* Work through sections 4,5,6 in the Software Carpentry lesson, bring questions for Friday's class
+Our tour of the shell is based on a set of lessons from Software Carpentry (https://software-carpentry.org/lessons/), and the zip file you copied into your home directory on the first day contains the sample data from those lessons. Work through sections 4 (Pipes and Filters), 5 (Loops), and 6 (Shell scripts) on your own, and bring questions to Friday's class.
