@@ -1,0 +1,37 @@
+#+TITLE: PHYS 381: Homework 02
+#+AUTHOR: 
+#+DATE: 19 January 2018
+#+LATEX_CLASS: tufte-handout
+#+OPTIONS: toc:nil
+
+* Broaden your toolbox
+Find and read the manual pages (either using the man command or on the web) for the following commands:
+| df | du   | cat  | more | less |
+| ps | sort | uniq | find | grep |
+
+Add the commands to your cheat sheet.[fn::If they're not there
+already. A few of these were covered in the Software Carpentry lessons
+you did for Homework 01.] 
+-----
+* Apply what you've learned
+Using some combination of the above commands (optionally with pipes), figure out:
+- which subdirectory of =data-shell= is the biggest?
+- How many processes are currently running that are owned by =root=? by
+  =cmckay=? by =cptn_caboose=?
+- How much free space is on the root filesystem?
+- How much free space is on =/warehouse=?
+
+Put these questions (and their answers) into a file called hw_02.md in
+an appropriate place under your =PHYS381= directory. Use markdown to
+format them in a sensible way.
+-----
+* Begin formatting your cheat sheet
+In an approprate place under your =PHYS381= directory, create a file
+called =00_shell.md=. Using *at least* headings and lists, begin
+formatting the information you've already collected. You may use
+whatever other markdown features you find helpful.
+
+At the end of your cheat sheet, include a references section that has
+links to one or two (or more) places on the web you have found useful
+information about the shell so far.[fn::Software carpentry is probably
+a good first choice here.]

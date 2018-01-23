@@ -1,0 +1,20 @@
+#+TITLE: PHYS 381: Homework 03
+#+AUTHOR: 
+#+DATE: 22 January 2018
+#+LATEX_CLASS: tufte-handout
+#+OPTIONS: toc:nil
+
+* Configure git on cluster
+Make sure git is configured on the cluster with your correct name and email address.
+
+-----
+* Download and install git for your own computer
+Make sure you're configured there, too.
+
+-----
+* Sign up for a github.com account
+Use the same email address you used to configure git on the cluster.
+
+-----
+* Begin collecting git commands for a cheat sheet
+Self explanatory.
