@@ -1,0 +1,34 @@
+* Monday
+** What is version control
+** Configuring git
+- git config --global user.name "First Last"
+- git config --global user.email "email"
+- git config --global color.ui "auto"
+** Create a repository
+*** git init
+*** git status
+** Tracking changes
+***  git add
+*** git commit
+*** git diff
+*** git log
+** Notes
+*** Staging area
+*** commit messages
+*** Directories
+** Retrieve previous versions
+*** git checkout
+** ignoring things
+*** .gitignore
+* Wednesday
+** Branches
+*** Why?
+*** Merges
+*** Resolving Conflicts
+** Remotes
+*** Again, why?
+*** Push and pull
+*** github
+*** Fork
+*** Pull Request
+** [[file:../homework/homework04.org][Homework]]

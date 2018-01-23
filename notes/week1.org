@@ -38,3 +38,173 @@ the --help flag is fairly common, but not universal
 - cp -r
 
 * Friday
+** Questions on homework?
+** Formatting
+*** The problem:
+Plain text is portable, easy to edit, and can be read and written by
+programs you write in your language of choice. It does, however, have
+at least one significant drawback: formatting.
+
+It's often the case that text alone isn't quite enough to effectively
+convey what you're trying to communicate. Sometimes you need diagrams,
+or plots, or tables; in this day and age, animations, video, and
+interactivity may even be desirable. In addition to rich content, you
+may want to change the way the text itself is presented (typeface,
+font size, line length, etc.) The reasons to do this are not only
+aesthetic, as the presentation of text can affect its
+readability.[fn::http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0074061]
+
+In looking for ways to add some richness and formatting to plain text,
+we will generally prefer simple solutions to complex ones and terse
+solutions to verbose ones (to save time typing). There's usually a
+tradeoff between simplicity and power, in that the simplest systems
+can't do much, but very powerful systems are of necessity pretty
+complex. The tradeoff between terseness and verbosity is complicated
+by the fact that if a system is too terse, it can be hard to remember
+how to make it do what you want. In any case, we want to retain the
+core features of plain text: openness, portability, and ease of
+reading, writing, and editing.
+
+Enter the idea of /markup/. A markup language uses plain text with
+special tags (usually some combination of punctuation characters not
+normally used for writing) to accomplish whatever formatting you
+need. Many, many markup languages exist. Two of the most common are
+HTML (the HyperText Markup Language) and XML (the eXtensible Markup
+Language). HTML is, of course, the basic standard for web pages, and
+dates back to the beginnings of the web in the early 90s. XML is less
+commonly used by humans (it tends to be much better for machines) but
+is extremely powerful and is widely used as an information interchange
+format.
+
+In this class, I will give suggestions and resources for two common
+systems of markup that you may use in your work. I'm not going to
+require that you use either one to format whole documents in any
+particular context, but you will have to become comfortable enough
+with both of them to be able to build a final presentation. More on
+that later.
+
+
+*** Solution one: Markdown
+John Gruber[fn::Purveyor of http://daringfireball.net, among other
+things] put together a markup language which he called Markdown
+in 2004. His intent was that it would serve as an easier way for
+people to work on documents for the web, without having to worry so
+much about the tags and special syntax present in HTML.
+
+#+BEGIN_QUOTE
+The overriding design goal for Markdown’s formatting syntax is to make
+it as readable as possible. The idea is that a Markdown-formatted
+document should be publishable as-is, as plain text, without looking
+like it’s been marked up with tags or formatting instructions. While
+Markdown’s syntax has been influenced by several existing text-to-HTML
+filters, the single biggest source of inspiration for Markdown’s
+syntax is the format of plain text
+email.[fn::https://daringfireball.net/projects/markdown/]
+#+END_QUOTE
+
+Markdown has been broadly adopted. Most importantly for our purposes,
+both Jupyter notebooks and Github natively support Markdown for
+formatting text. Therefore, as you are formatting text within Jupyter
+notebooks or in files that will be committed to Github, Markdown is a
+sensible choice.
+
+**** Advantages
+- Markdown syntax is both simple and intended to be intuitive.
+- Markdown is very readable, even without additional formatting.
+- Markdown files are plain text, so you can work with a normal text
+  editor.
+- Plain text also plays well with grep, diff, and version control.
+- Since it was designed for the web, links, embedded images, and other
+  web features are standard.
+
+**** Disadvantages
+- Markdown does not separate formatting from structure in any
+  meaningful way.
+- Vanilla markdown does not support math typesetting.
+- It's not really designed for complex documents. (I suppose that
+  could be a feature, rather than a bug, depending on what you're doing.)
+
+
+*** Solution two: LaTeX
+For our second solution, we go even further back, to the 1970s. Donald
+Knuth[fn::Professor Emeritus of the Art of Computer Programming at
+Stanford] was dissatisfied with the quality of typesetting, and in
+particular, mathematical typesetting, that he observed in journal
+articles he and his colleagues were having published, so he decided to
+create a computer-based typesetting system. His system, TeX, was first
+released in 1978, and is now at version 3.14159265 (it is approaching
+$\pi$, gaining one digit at each release).
+
+In the 1980s, Leslie Lamport[fn::Computer scientist then at SRI
+International, now at Microsoft] put together a collection of macros
+to make the consistent construction of large documents in TeX
+easier. He called his creation LaTeX (short for Lamport TeX), and it
+is the main way people use TeX today.
+
+TeX and LaTeX were designed with the page in mind, rather than the
+web, so they have some capabilities and limitations that you don't
+find in Markdown or HTML. If your document is eventually going to end
+up on paper, LaTeX is a good choice.
+
+TeX syntax is much more complex than Markdown, but much more readable
+than say, PostScript[fn::Another page description or typesetting
+language, largely eclipsed these days by its younger cousin, pdf] It
+is the de-facto standard in the mathematically oriented sciences (many
+journals will accept submissions in LaTeX, and supply formatting
+templates to authors). Furthermore, a subset of the syntax for
+typesetting math is understood by Jupyter notebooks, so if you ever
+want to put mathematical expressions in a notebook, you will be using
+LaTeX.
+
+**** Advantages
+- Math typesetting is beautiful.
+- Decouples document structure and formatting.
+- Built-in handling of footnotes, Bibliographic references, contents,
+  cross-referencing, indexing, and other features desirable in an
+  academic document with complex structure.
+- You have as much control as you're willing to exert.
+- Tremendous versatility.
+
+**** Disadvantages
+- The learning curve is challenging.
+- The amount of flexibility can be daunting.
+- the commands and keywords interfere with spell checking.
+
+
+*** Other solutions
+Markdown and LaTeX are two good (and in some ways, complementary)
+starting places for dealing with the problem of formatting plain text
+documents, but they're not the only game in town. I've already
+mentioned HTML, and if you're primarily working on the web, that could
+be an option (though personally, I think that Markdown plus a Markdown
+to HTML converter is better in almost every way). If you have a heavy
+python background, you're probably familiar with reStructuredText,
+which is the format used for a lot of python documentation. It is a
+lightweight markup language like Markdown, but pays more attention to
+document structure, and has some other features that make it useful
+for writing technical documentation.
+
+Or, there's DocBook, which is an extension of XML. It focuses entirely
+on structure, meaning that you need some additional information to
+specify formatting. The nice advantage here is that you can publish
+from DocBook into a wide range of output formats for print, ebooks, or
+the web. Like other XML formats, the syntax can outweigh the content,
+making it hard for humans to write or read. It's not something I would
+recommend for students.
+
+
+*** Conclusion
+My advice: If you only want to learn one kind of markup, learn LaTeX
+if you find yourself often needing math.[fn::If you're doing
+computational physics, this almost certainly includes
+you.] Otherwise, learn Markdown. Of course, if you've gone through
+the trouble to become proficient in LaTeX, adding Markdown to your
+toolbox will be ridiculously easy, and you should probably do that,
+too, just to make yourself a bit more versatile.
+
+*** References
+
+- [[https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf][Git flavored Markdown Cheat sheet]]
+- [[http://texdoc.net/texmf-dist/doc/plain/gentle/gentle.pdf][A gentle introduction to TeX]]
+- [[https://tobi.oetiker.ch/lshort/lshort.pdf][The not so short introduction to LaTeX]]
+- [[https://tug.org/pracjourn/2008-3/gratzer/gratzer.pdf][A gentle learning curve for LaTeX]]

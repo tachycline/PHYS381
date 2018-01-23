@@ -1,0 +1,46 @@
+* One dimensional Schrodinger equation
+** Dataset 
+** Plots 
+- Energy diagram
+- eigenstates
+** Fits 
+** Tests 
+** Simulation 
+** Parallel
+* Materials science
+** Dataset 
+- [[materialsproject.org][The Materials Project]]
+** Plots 
+** Fits 
+** Tests 
+** Simulation 
+** Parallel
+* Bragg diffraction/scattering
+** Dataset 
+** Plots
+- spectra 
+** Fits 
+** Tests 
+** Simulation 
+** Parallel
+* Galaxies from SDSS (Hubble diagram)
+** Dataset 
+- SDSS Galaxy data
+** Plots
+- Distribution
+- relationship
+** Fits 
+- redshift vs distance (or proxies)
+** Tests 
+** Simulation 
+** Parallel
+* Projectile Motion with drag
+** Dataset
+- From video
+** Plots
+- Time series
+** Fits 
+- drag coefficients
+** Tests 
+** Simulation 
+** Parallel
