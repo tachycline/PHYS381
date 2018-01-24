@@ -4,6 +4,63 @@
 #+LATEX_CLASS: tufte-handout
 #+OPTIONS: toc:nil
 
+# if you're reading this file (instead of something that's
+# nicely typeset) note that the equal signs are for typesetting
+# purposes. Leave them out when you're typing commands.
+
 * Working with remotes
+- Navigate to https://github.com/tachycline/PHYS381 and make sure you are logged in.
+- /Fork/ the repository by pressing the "Fork this repository" button. 
+This makes a copy of the =PHYS381= repository owned by you on github.com.
+- Navigate to your fork =https://github.com/<YOUR GITHUB USERNAME>/PHYS381=
+- If you previously made a =PHYS381= directory on the cluster, you should
+rename it now to avoid collisions.
+- On the cluster, make a /clone/ of your fork:
+
+=git clone https://github.com/<YOUR GITHUB USERNAME>/PHYS381=
+
+Now you have two copies of the repository: one on github, and one on the
+cluster.  Verify this by using the command =git remote -v= on the cluster.
+- On the cluster, add my copy of the repository as an additional remote:
+
+=git remote add upstream https://github.com/tachycline/PHYS381=
+
+- to update your fork after I make changes to my repository, do
+
+=git pull upstream master=
+=git push origin master=
+
+on the cluster. The first of these commands updates your repository on the
+cluster, and the second moves those changes back to your repository on github.
+-----
+
+
 * Making Branches
-* Dealing with Conflicts
+- Copy your current git cheat sheet to your =homework= directory on the cluster.
+It should have entries for (at least) git init, git checkout, git add,
+and git commit.
+- Make two branches (either using =git branch= or =git checkout -b=).
+Call one of them "homework" and the other "cheatsheets" (without the quotes).
+- Switch to your =homework= branch using =git checkout=.
+- Add an entry for git branch to the end of the file (or the end of your
+ commands section, if that's more appropriate) and commit.
+- Switch to your =cheatsheets= branch.
+- Add an entry for git remote to the end of the file (or the end of your
+ commands section, if that's more appropriate) and commit.
+
+You should now have three branches: =homework=, =cheatsheets=, and =master=,
+each of which has a different version of your git cheatsheet.
+
+You can use =git diff <branchname>= to compare =<branchname>= to the 
+current branch.
+-----
+
+
+* Merging and Conflicts
+- Change to your master branch 
+- Use =git merge= to bring the changes from your =cheatsheets= branch into =master=.
+This merge should proceed without errors.
+- Now use =git merge= to bring the changes from your =homework= branch into =master=, as well.
+This should complain about a conflict.
+- To resolve the conflict, edit the conflicting file and commit.
+- For further information, check out [[https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/][github's explanation]] or [[http://genomewiki.ucsc.edu/index.php/Resolving_merge_conflicts_in_Git][this writeup]].
