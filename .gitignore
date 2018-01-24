@@ -1,8 +1,15 @@
+# pdflatex output
 *.pdf
 *.synctex.gz
 *.log
 *.aux
 *.out
 
+# extra stuff from jupyter notebooks
 .ipynb_checkpoints/
 
+# intermediate files when converting .org to .pdf
+# I focus on specific file names here because I don't want
+# to ignore all .tex files.
+homework??.tex
+week*.tex
