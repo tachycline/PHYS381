@@ -1,0 +1,28 @@
+#+TITLE: PHYS 381: Homework 05
+#+AUTHOR: 
+#+DATE: 26 January 2018
+#+LATEX_CLASS: tufte-handout
+#+OPTIONS: toc:nil
+
+* A python of your own
+Install Anaconda on your own computer if you have not already done so.
+-----
+
+
+* Required packages
+We will be using a number of external python libraries over the course of the rest of the semester.
+Install the following packages via anaconda.  (You do not need to do anything to have these installed
+on the cluster; they're already there.)
+
+| notebook | numpy | matplotlib | scipy       |
+| pandas   | h5py  | sympy      | statsmodels |
+------
+
+
+* Consistent environments
+- Figure out which version of each of the 8 libraries listed above is running on the cluster.
+- Figure out which version of python is running on the cluster.
+- Create a conda environment from within anaconda; make sure it matches the version of python on the cluster and call it PHYS381.
+- Make your environment consistent with the cluster by installing the appropriate versions of the above 8 libraries.
+
+There's more than one way to do this. You may find the [[https://conda.io/docs/user-guide/tasks/manage-environments.html][relevant conda documentation]] helpful.

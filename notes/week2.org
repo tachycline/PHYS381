@@ -1,3 +1,10 @@
+#+TITLE: PHYS 381: Week 02
+#+AUTHOR: 
+#+DATE: 22--26 January 2018
+#+LATEX_CLASS: tufte-handout
+#+OPTIONS: toc:nil
+
+
 * Monday
 ** What is version control
 ** Configuring git
@@ -23,12 +30,46 @@
 * Wednesday
 ** Branches
 *** Why?
+- separate work thematically
+- think of it as a "sub-repository"
+- works best when changes are orthogonal
+- best practice: don't merge into =master= until things are tested and
+  complete.
+*** How
+- =git branch=
+- =git checkout -b=
 *** Merges
+- copies work from one branch into another.
 *** Resolving Conflicts
 ** Remotes
 *** Again, why?
+- multiple people 
+- multiple machines
+- sharing is caring
 *** Push and pull
+- pull is fetch and merge
+- push sends one or more branches
 *** github
+- a place for repositories
 *** Fork
+- make a github copy
 *** Pull Request
+- literally, a request for someone else to pull
 ** [[file:../homework/homework04.org][Homework]]
+* Friday
+** Python (and versions)
+*** Python 2.7 vs. 3.x
+*** python vs. ipython
+*** REPL at command line vs. notebook
+*** Standard lib vs. external libraries
+*** numpy
+*** matplotlib
+*** scipy
+** Anaconda -- for your computer
+*** Installing packages
+*** environments
+*** launcher
+** Consistency in your environments
+*** Don't need to worry about this on the cluster
+*** requirements.txt
+*** evironment.yml
