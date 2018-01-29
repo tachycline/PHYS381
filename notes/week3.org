@@ -1,0 +1,61 @@
+#+TITLE: PHYS 381: Week 3
+#+AUTHOR: 
+#+DATE: 
+#+LATEX_CLASS: tufte-handout
+#+OPTIONS: toc:nil
+
+* Monday
+** numpy
+*** Arrays and indexing
+- Ultra-basics
+  + ndim
+  + shape
+  + size
+  + itemsize
+  + type, dtype
+- data types
+  + float
+  + int
+  + bool
+  + object
+- placeholder arrays
+  + zeros
+  + zeros_like
+  + ones
+  + ones_like
+- sequences
+  + arange
+  + linspace
+- random numbers
+  + rand
+  + randn
+  + seed
+- reshape and combine
+  + reshape
+  + vstack
+  + hstack
+- statistics (axis keyword)
+  + sum
+  + min
+  + max
+  + var
+  + std
+- copies and views
+  + source of many bugs
+  + assignment -- no copy
+  + view -- "shallow copy"; slices
+  + copy -- "deep copy"
+- iteration
+- comparison
+- boolean indexing
+- selection with integer arrays
+
+* Wednesday
+** pandas
+*** Index
+*** Series
+*** DataFrame
+
+* References
+- https://docs.scipy.org/doc/numpy-dev/user/quickstart.html
+- https://engineering.ucsb.edu/~shell/che210d/numpy.pdf

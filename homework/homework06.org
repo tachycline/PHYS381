@@ -1,0 +1,15 @@
+#+TITLE: PHYS 381: Homework 06
+#+AUTHOR: 
+#+DATE: 29 January 2018
+#+LATEX_CLASS: tufte-handout
+#+OPTIONS: toc:nil
+
+* Begin your cheat sheet for =numpy=.
+
+-----
+* Read section 1 (Rounding Error) of http://www.itu.dk/~sestoft/bachelor/IEEE754_article.pdf
+
+- You won't understand all of it the first time through, and that's okay.
+- What implications does the discussion of rounding error have on your ability to compare results?
+
+
