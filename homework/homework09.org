@@ -30,7 +30,7 @@ Finally, formatting your answer in a Jupyter notebook will give you practice
 - Begin the notebook with a markdown cell explaining what you are intending to do in this assignment. Be sure to include the figure you are trying to duplicate. You can do this either with markdown, or by using the =Image= function in the =IPython.display= module.
 - In the cell after the image, make a list of all of the features of the plot that you will have to duplicate. You could technically do this in python comments, but it will be more readable if you use a markdown list.
 - Make a python code cell for your imports. Remember to use the =%matplotlib inline= magic.
-- Make a python code cell for data manipulation. Within this cell you will need to
+- Make a python code cell (or multiple cells) for data manipulation. Within this cell you will need to
   + Load the csv file you made in homework 7 into a dataframe
   + select the appropriate column of your dataframe
   + separate outliers from non-outliers
@@ -39,7 +39,9 @@ Finally, formatting your answer in a Jupyter notebook will give you practice
   + Figure out from your data how many upper outliers and how many lower outliers there are.
   + Use the output of your call to =matplotlib.pyplot.hist= to figure out where to locate your outlier bars
   + Create each bar using =matplotlib.patches.Rectangle=
-  + Add both rectangles 
+  + Add both rectangles to a =matplotlib.collections.PatchCollection=
+  + Apply styling (color, transparency, etc.) to the patch collection
+  + Add the patch collection to the axes.
 - When you are satisfied that your plot matches the one in the file, add a line to save the figure in a file =HW9a-solved.png=
 - Reflect: In a markdown cell, write a paragraph or two reflecting on this exercise. In particular, 
   + What piece or pieces of the plot were difficult to reproduce?
