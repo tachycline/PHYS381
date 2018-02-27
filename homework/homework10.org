@@ -1,0 +1,65 @@
+#+TITLE: PHYS 381: Homework 10
+#+AUTHOR: 
+#+LATEX_CLASS: tufte-handout
+#+OPTIONS: toc:nil
+
+* Build a Pipeline
+Your goal is to add two functions to the module =HW10.py= in the
+current directory:
+- One to produce a properly labeled histogram of a given column within
+  a dataframe;
+- One to produce a plot containing an array of histograms for comparison.
+
+** Purpose:
+This assignment addresses the following learning outcomes:
+- *Designing and organizing code for reuse.* Well-designed software is
+  modular and reusable. In this assignment you will have the
+  opportunity to write two functions that will work together, as your
+  array-of-histograms function should call the single histogram
+  function. However, the annotations needed for a single histogram
+  will be different than those needed for the array, so you will have
+  to put some thought into making the functions flexible.
+- *Documentation.* Reusable code has to be well documented. The two
+  aspects of documentation most relevant to this assignment are
+  docstrings and comments.
+- *Plotting distributions.* Part of representing data effectively is
+  knowing what kind of plot to use when. In this assignment, since
+  we're looking at distributions, you will become more familiar with
+  matplotlib's functions related to histograms.
+- *Effective annotations under constraints.* We talked in class about
+  removing visually distracting annotations when going from a single
+  histogram to multiple histograms.
+** Tasks:
+- Add functionality to the =single_hist= function similar to the
+  =make_hist= function in the SDSS data exploration notebook. You have
+  two choices here:
+  + Use the same philosophy we did in class, and have the
+    =single_hist= function cut the tranche, or
+  + Assume that the tranche cutting happens elsewhere, and treat the
+    data being passed in as already being trimmed.
+  You will notice that the =HW10= module already contains a
+  =make_tranche= function, which you may find helpful.
+- Document your =single_hist= function with an appropriate
+  docstring. See the =make_tranche= function for an example.
+- Add functionality to the =hist_array= function similar to what we
+  did in the cell immediately following the definition of =make_hist=
+  in the SDSS data exploration notebook. The default should be a 10 x
+  10 array.
+- Document =hist_array=. 
+** Some notes
+- You can give your =single_hist= function an optional argument to
+  switch between the annotations needed for the single and multiple
+  views.
+** Outcomes:
+You and I will both know that you have succeeded with this assignment
+when:
+
+- The =HW10 Testing= notebook runs without errors.
+- Your single histogram is annotated to include:
+  + the total number of stars in the tranche
+  + the percentile of radial distance we're plotting
+  + the value of the tallest bar
+- Your histogram array is annotated to include:
+  + the total population
+  + the population size of each histogram
+- Your histogram array has unreadable background clutter removed.
