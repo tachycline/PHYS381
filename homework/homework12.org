@@ -1,0 +1,47 @@
+#+TITLE: PHYS 381: Homework 12
+#+AUTHOR: 
+#+LATEX_CLASS: tufte-handout
+#+OPTIONS: toc:nil
+
+
+* Shooting exercises
+Your goal is to adapt the work we have done with shooting in class to use with
+different potentials in Schrodinger's equation. This work should be collected
+in an organized and well-documented Jupyter notebook.
+
+** Purpose:
+- Practice modifying code originally prepared by someone else
+- Review/Revisit some plotting principles
+- Produce an annotated shooting example you can use in the future for reference
+
+** Tasks:
+- Create a jupyter notebook and call it "HW12"
+- Import the necessary libraries
+- copy the function definitions for =mirror_result=, =bc=, =find_energies=, and =plot_energy_diagram= from the "Introductory shooting" notebook.
+- modify the =bc= function to take a function containing the RHS of Schrodinger's equation as an argument
+- Organize the above pieces, along with your explanation of what they do, in a section called "Shooting Tools"
+- Write a generic RHS function (similar to the =qho= function in the "Introductory shooting" notebook) which takes a potential function as an
+  argument, and then write potential functions for the following potentials:
+  + The absolute value potential $V(x) = a|x|$
+  + The quartic potential $V(x) = ax^4$
+  + The infinite square well potential, centered on $x=0$
+  + The finite square well potential, centered on $x=0$
+- For each potential function,
+  + Create a section in your notebook with the name and mathematical definition of the potential
+  + Write out the time independent Schrodinger equation with that potential
+  + define the approprate RHS function
+  + calculate 5 energies
+  + plot an energy diagram with those 5 energies and eigenfunctions
+
+It is likely that as you work through these potentials, your original plotting routine will become inadequate. For each potential, therefore, you
+should:
+- Evaluate the plot. In particular: are the bounds reasonable? Is scaling appropriate? Can you see all of the details you want to see? Do any lines overlap in a confusing way? Are there annotations that would make the plot more useful/communicative?
+- Write the results of your evaluation in the appropriate section of your notebook
+- If changes need to be made, add the capability to your plotting function.
+- When possible, include quantities like scaling and bounds as parameters, rather than as hardcoded numbers.
+
+** Outcomes:
+You and I will both know that you have succeeded with this assignment
+when your notebook can run without errors (/i.e./ =Restart Kernel and run all=
+executes everything and shows no error messages), contains the work
+and results described above, and is committed to your personal git repository.
