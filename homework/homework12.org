@@ -17,11 +17,9 @@ in an organized and well-documented Jupyter notebook.
 ** Tasks:
 - Create a jupyter notebook and call it "HW12"
 - Import the necessary libraries
-- copy the function definitions for =mirror_result=, =bc=, =find_energies=, and =plot_energy_diagram= from the "Introductory shooting" notebook.
-- modify the =bc= function to take a function containing the RHS of Schrodinger's equation as an argument
+- copy the function definitions for =mirror_result=, =bc=, =find_energies=, =schro_rhs_, and =plot_energy_diagram= from the "Introductory shooting" notebook.
 - Organize the above pieces, along with your explanation of what they do, in a section called "Shooting Tools"
-- Write a generic RHS function (similar to the =qho= function in the "Introductory shooting" notebook) which takes a potential function as an
-  argument, and then write potential functions for the following potentials:
+- Write potential functions for the following potentials:
   + The absolute value potential $V(x) = a|x|$
   + The quartic potential $V(x) = ax^4$
   + The infinite square well potential, centered on $x=0$
