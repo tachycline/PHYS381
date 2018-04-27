@@ -1,0 +1,62 @@
+#+TITLE: PHYS 381: Homework 09
+#+AUTHOR: 
+#+LATEX_CLASS: tufte-handout
+#+OPTIONS: toc:nil
+
+* Duplicate a figure
+Your goal is to duplicate the figure stored in the file =HW9a.png= as closely as possible.
+** Purpose:
+Duplicating any plot gives you practice in two lightly overlapping skill sets:
+  - Identifying the component parts of a given figure
+  - Use the appropriate parts of =matplotlib= to generate those specific component parts.
+
+This particular figure includes
+  - a histogram (for plotting distributions)
+  - necessary annotations
+  - a /patch collection/ consisting of two rectangles
+
+Additionally, working with the data that goes into this plot will allow you to practice
+  - selecting rows of a dataframe based on values in a particular column
+  - selecting a single column of a dataframe
+  - column arithmetic in a dataframe
+
+Finally, formatting your answer in a Jupyter notebook will give you practice
+- using markdown in a notebook
+- including externally produced images in a notebook
+- iterating to produce a plot
+
+** Tasks:
+- Create a new notebook called "HW 9 Solution". Jupyter will automatically add the =.ipynb= extension.
+- Begin the notebook with a markdown cell explaining what you are intending to do in this assignment. Be sure to include the figure you are trying to duplicate. You can do this either with markdown, or by using the =Image= function in the =IPython.display= module.
+- In the cell after the image, make a list of all of the features of the plot that you will have to duplicate. You could technically do this in python comments, but it will be more readable if you use a markdown list.
+- Make a python code cell for your imports. Remember to use the =%matplotlib inline= magic.
+- Make a python code cell (or multiple cells) for data manipulation. Within this cell you will need to
+  + Load the csv file you made in homework 7 into a dataframe
+  + select the appropriate column of your dataframe
+  + separate outliers from non-outliers
+- Make a python code cell to generate the plot.
+  The only part of this we haven't discussed in class is the patch collection for the two bars indicating outliers. You will need to
+  + Figure out from your data how many upper outliers and how many lower outliers there are.
+  + Use the output of your call to =matplotlib.pyplot.hist= to figure out where to locate your outlier bars
+  + Create each bar using =matplotlib.patches.Rectangle=
+  + Add both rectangles to a =matplotlib.collections.PatchCollection=
+  + Apply styling (color, transparency, etc.) to the patch collection
+  + Add the patch collection to the axes.
+- When you are satisfied that your plot matches the one in the file, add a line to save the figure in a file =HW9a-solved.png=
+- Reflect: In a markdown cell, write a paragraph or two reflecting on this exercise. In particular, 
+  + What piece or pieces of the plot were difficult to reproduce?
+  + Under what circumstances might you want to make a plot like this?
+  + Which components of this plot do you think would be useful in other plots?
+  + What sort of story can you imagine telling using this type of plot?
+- Clean your notebook. Tto accomplish this:
+  + Remove extraneous cells
+  + Make sure there are enough comments or markdown cells to explain what happened in each step of your solution
+  + In the Kernel menu, select "Restart and Run All"
+  + Correct any errors that come up and repeat.
+- Commit your notebook (you do not need to commit the saved image) to your git repository with an appropriate commit message.
+
+** Outcomes:
+You and I will both know that you have succeeded with this assignment when
+- Your generated plot matches the one provided.
+- Your notebook contains the sections described above.
+- Your git commit log shows that you have committed your notebook.

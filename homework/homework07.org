@@ -1,0 +1,14 @@
+#+TITLE: PHYS 381: Homework 07
+#+AUTHOR: 
+#+LATEX_CLASS: tufte-handout
+#+OPTIONS: toc:nil
+
+* Dealing with data in csv files
+There are 640 csv files in the directory =/home/cmckay/clusters/CQM=. For each of these files, to the following:
+- load the file into a pandas dataframe
+- Calculate the ratio of the starting energy (the first value in column 'E') to the ending energy (the last value in column ('E').
+- Calculate the median values of each of the six coordinate columns (the ones with =(t)= in their names)
+- Calculate the median of $T/E$ (you will first have to calculate $T/E$!)
+
+Put your results in a dataframe (you may use the file names with or without the =.csv= extension as your index) and write the dataframe
+to a csv file in your homework directory. Call it "HW7.csv".

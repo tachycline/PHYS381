@@ -1,0 +1,55 @@
+#+TITLE: PHYS 381: Homework 11
+#+AUTHOR: 
+#+LATEX_CLASS: tufte-handout
+#+OPTIONS: toc:nil
+
+* ODE Exercises
+Your goal is to solve a collection of ODEs numerically, and compare
+your numeric and analytic solutions. These solutions should be
+collected into a well organized and annotated jupyter notebook.
+
+** Purpose: 
+- Practice using =scipy.integrate.odeint=
+- Produce a library of ODE solution examples you can refer to in the future
+- Discuss solution accuracy
+
+** Tasks:
+- Create a new jupyter notebook called "HW11"
+- Import the necessary libraries
+- For each of the differential equations below, make a section of the
+  notebook (begin with a markdown cell containing a level 1 or
+  level 2 title, and end with a markdown cell consisting of a
+  horizontal line)
+- In the markdown, typeset the equation to be solved.
+- Make a code cell in which you define the RHS of the ODE.
+- Make a code cell in which you appropriately set the domain and
+  initial conditions, and solve the equation
+- Make a code cell in which you define a function for the analytic
+  solution (if available) and compute the residual.
+- If an analytic solution was available, comment on the size of the
+  residual. (Relative uncertainty might be your best avenue here).
+- Make a code cell in which you plot the results with appropriate
+  annotations
+- In your final markdown cell, remark on the features of this ODE that
+  make it different from the others in this assignment, and what steps
+  were required in your functions to deal with those differences.
+
+- ODEs:
+  + $dy/dx = 3x^2 - 2$; $0\le x\le 1$; initial conditions: $y(0) =
+    0.5$
+  + $dy/dx = 3y$; $0\le x\le 1$; initial conditions: $y(0) =
+    0.5$
+  + $d^2y/dx^2 = -2y$; $0\le x\le 1$; initial conditions: $y(0) = -1,\,
+    y'(0) = 1$
+  + Vertical mass on a spring; $m=0.5kg$, $k=25 N/m$; initial
+    conditions: $y, v_y = 0$ at $t=0$ (measured from the equilibrium
+    position of the spring with no mass attached).
+  + Projectile motion without air resistance, $m=100.0 kg$,
+    $\mathbf{v}(t=0) = 200 m/s$, $37^\circ$ above the horizontal.
+
+
+** Outcomes:
+You and I will both know that you have succeeded with this assignment
+when your notebook can run without errors (/i.e./ =Restart Kernel and run all=
+executes everything and shows no error messages), contains the work
+and results described above, and is committed to your personal git repository.

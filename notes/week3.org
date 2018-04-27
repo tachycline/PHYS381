@@ -1,0 +1,110 @@
+#+TITLE: PHYS 381: Week 3
+#+AUTHOR: 
+#+DATE: 
+#+LATEX_CLASS: tufte-handout
+#+OPTIONS: toc:nil
+
+* Monday
+** numpy
+*** Arrays and indexing
+- Ultra-basics
+  + ndim
+  + shape
+  + size
+  + itemsize
+  + type, dtype
+- data types
+  + float
+  + int
+  + bool
+  + object
+- placeholder arrays
+  + zeros
+  + zeros_like
+  + ones
+  + ones_like
+- sequences
+  + arange
+  + linspace
+- random numbers
+  + rand
+  + randn
+  + seed
+- reshape and combine
+  + reshape
+  + vstack
+  + hstack
+- statistics (axis keyword)
+  + sum
+  + min
+  + max
+  + var
+  + std
+- copies and views
+  + source of many bugs
+  + assignment -- no copy
+  + view -- "shallow copy"; slices
+  + copy -- "deep copy"
+- iteration
+- comparison
+- boolean indexing
+- selection with integer arrays
+
+* Wednesday
+** floating point numbers
+- What did you get out of the reading?
+- 
+** pandas
+*** Series
+- a labeled collection of data
+- create from =ndarray=
+- create from =dict=
+- automatic data alignment
+- can be named
+
+*** DataFrame
+**** analogies
+- Like a =dict= of =Series= objects
+- Like a spreadsheet
+**** How to build
+- from 2d ndarray
+- from dict of series
+- from dict of 1d ndarrays
+- can specify index, column names
+**** selection
+- get columns like a dict
+- =.loc= method to get rows by label
+- =.iloc= method to get rows by integer location
+- slice rows
+- select rows by boolean vector
+**** Arithmetic (and data alignment)
+
+*** basic orientation
+- head
+- tail
+- info
+- describe
+
+*** Reading and saving data
+- read_csv, to_csv
+
+* Friday
+** Reproducibility
+- functions
+- notebooks
+- scripts
+- classes
+- modules
+- packages
+
+** looking at lots of files
+- glob
+- iterators
+- apply
+
+* References
++ numpy
+  - https://docs.scipy.org/doc/numpy-dev/user/quickstart.html
+  - https://engineering.ucsb.edu/~shell/che210d/numpy.pdf
++ pandas
+  - https://pandas.pydata.org/pandas-docs/stable/tutorials.html
