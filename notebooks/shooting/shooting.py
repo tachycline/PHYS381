@@ -59,7 +59,7 @@ def shoot_for_eigenvalues(rhs, args, ic, get_interval_endpoint, n=3):
         bracket_found = False
     return eigenvalues
 
-def bc(eigenvalue, rhs, args, ic, endpoint=5):
+def bc(eigenvalue, rhs, args, ic, endpoint=5, startpont=None):
     """Find the boundary value for an eigenvalue problem.
     
     Parameters:
@@ -80,7 +80,10 @@ def bc(eigenvalue, rhs, args, ic, endpoint=5):
     y : array
         The solution to the equation defined by rhs. 
     """
-    domain = np.linspace(-endpoint,endpoint,1000)
+    if startpoint is None:
+        domain = np.linspace(-endpoint,endpoint,1000)
+    else:
+        domain = np.linspace(startpoint, endpoint, 1000)
         
     result = odeint(rhs, ic, domain, args=(eigenvalue, ) + args)
     return result[-1,0]
